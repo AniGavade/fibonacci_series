@@ -1,16 +1,17 @@
 #1
-'''
+"""
 for i in range(5):
     for j in range(i+1):
         print("* ",end="")
     print()
-'''
-'''
+"""
+
+"""
 for i in range(1,6):
     for j in range(i):
         print("* ",end="")
     print()
-'''
+"""
 
 #without nested for loop
 '''
@@ -32,12 +33,12 @@ for i in range(1,6):
 
 
 #2 
-'''
+"""
 for i in range(5):
     for j in range(i,5):
         print("* ",end="")
     print()
-'''
+"""
 '''
 for i in range(1,6):
     for j in range(6,i,-1):
@@ -450,6 +451,7 @@ for i in range(1,6):
 * * * * 
 '''
 
+"""
 length=4
 breadth=8
 
@@ -458,6 +460,7 @@ for i in range(length):
         print('*'*breadth)
     else:
         print('*'+' '*(breadth-2)+'*')
+"""
 
 #output
 '''
@@ -467,6 +470,7 @@ for i in range(length):
 ********
 '''
 
+"""
 length=4
 breadth=8
 
@@ -475,7 +479,7 @@ for i in range(breadth):
         print('*'*length)
     else:
         print('*'+' '*(length-2)+'*')
-
+"""
 #output
 '''
 ****
