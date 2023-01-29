@@ -15,7 +15,6 @@
 # Expected Output: Counter({'item1': 1150, 'item2': 300})
 
 
-
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # str_ = "AD4EG2H2J"
@@ -55,15 +54,15 @@
 
 # # Without using inbuilt method.
 #
-s1 = "mohanmanofmangal"
-dict_ = {}
-for i in s1:
-    if i in dict_:
-        dict_[i] = dict_[i] + 1
-    else:
-        dict_[i] = 1
-result_ = max(dict_, key=dict_.get)
-print(result_, "=", dict_[result_])
+# s1 = "mohanmanofmangal"
+# dict_ = {}
+# for i in s1:
+#     if i in dict_:
+#         dict_[i] = dict_[i] + 1
+#     else:
+#         dict_[i] = 1
+# result_ = max(dict_, key=dict_.get)
+# print(result_, "=", dict_[result_])
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # # By Using count() method
@@ -101,9 +100,42 @@ print(result_, "=", dict_[result_])
 # print(high_count_ele(str_))
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-str_ = "mohanmanofmangal"
-dict_ = {i: str_.count(i) for i in str_}
-result_ = max(dict_, key=dict_.get)
-print(result_, "=", dict_[result_])
+# str_ = "mohanmanofmangal"
+# dict_ = {i: str_.count(i) for i in str_}
+# result_ = max(dict_, key=dict_.get)
+# print(result_, "=", dict_[result_])
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# Sort the list of dict using students I'd without using sort function
+
+
+# def sort_list(students):
+#     new_list = []
+#     while students:
+#         min_student = min(students, key=lambda x: x['student_id'])
+#         new_list.append(min_student)
+#         students.remove(min_student)
+#     return new_list
+#
+#
+# students = [{"student_name": "s4", "student_id": 24}, {"student_name": "s1", "student_id": 13},
+#             {"student_name": "s2", "student_id": 19}, {"student_name": "s3", "student_id": 10}]
+# print(sort_list(students))
+
+
+# By using lambda function.
+students = [{"student_name": "s4", "student_id": 24}, {"student_name": "s1", "student_id": 13},
+            {"student_name": "s2", "student_id": 19}, {"student_name": "s3", "student_id": 10}]
+students = list(map(lambda x: x, sorted(students, key=lambda x: x['student_id'])))
+print(students)
+
+print({i*i: i**3 for i in range(1, 11)})
+
+
+lst = [0, 1, 2, [], [3, 4], (), ('a', 'b'), [], [5, 6, 7], 8]
+lst_op = list(filter(lambda x: x or x != [], lst))
+print(lst_op)
+
+list_op = [i for i in lst if i or i != []]
+print(list_op)
 
